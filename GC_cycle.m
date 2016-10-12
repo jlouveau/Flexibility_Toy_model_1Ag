@@ -31,8 +31,8 @@ new_exit_cells = zeros(1, n_exit);
 
 for k = 1:n_exit
     ind = randi(size(b_cells_trial,2));
-    new_exit_cells(k) = b_cells_trial(ind); %add the chosen b cells to the exit b cells
-    b_cells_trial(ind) = []; % remove that b_cells from the list of GC b cells.
+    new_exit_cells(:,k) = b_cells_trial(:,ind); %add the chosen b cells to the exit b cells
+    b_cells_trial(:,ind) = []; % remove that b_cells from the list of GC b cells.
 end
   
 
